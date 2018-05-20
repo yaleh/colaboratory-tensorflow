@@ -7,13 +7,14 @@
 #                --NotebookApp.allow_origin='https://colab.research.google.com' \
 #                --allow-root
 
-FROM tensorflow/tensorflow:latest-gpu
+FROM tensorflow/tensorflow:latest-gpu-py3
 
 MAINTAINER Yale Huang <calvino.huang@gmail.com>
 
-RUN pip install jupyter_http_over_ws
+RUN pip3 install jupyter_http_over_ws
 RUN jupyter serverextension enable --py jupyter_http_over_ws
-RUN pip install --upgrade --ignore-installed notebook
+RUN pip3 install --upgrade --ignore-installed notebook
+RUN pip3 install keras
 
 COPY run_jupyter.sh /
 
