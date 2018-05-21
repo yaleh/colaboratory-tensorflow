@@ -14,7 +14,7 @@ MAINTAINER Yale Huang <calvino.huang@gmail.com>
 RUN pip install jupyter_http_over_ws
 RUN jupyter serverextension enable --py jupyter_http_over_ws
 RUN pip install --upgrade --ignore-installed notebook
-#RUN pip install keras
+RUN pip install keras
 
 COPY run_jupyter.sh /
 
