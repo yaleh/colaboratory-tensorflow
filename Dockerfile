@@ -15,6 +15,7 @@ RUN pip3 install jupyter_http_over_ws
 RUN jupyter serverextension enable --py jupyter_http_over_ws
 RUN pip3 install --upgrade --ignore-installed notebook
 RUN pip3 install keras
+RUN pip3 install jupyterlab
 
 COPY run_jupyter.sh /
 

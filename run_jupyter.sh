@@ -15,4 +15,4 @@
 # ==============================================================================
 
 export TF_MIN_GPU_MULTIPROCESSOR_COUNT=4
-jupyter notebook "$@"
+jupyter lab "$@"
